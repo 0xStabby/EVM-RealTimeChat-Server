@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: EVM-RealTimeChat-Server
+    runtime: node
+    plan: free
+    buildCommand: pnpm i
+    startCommand: pnpm run dev
+    envVars:
+      - key: VITE_DEV_STATUS
+        value: 3
