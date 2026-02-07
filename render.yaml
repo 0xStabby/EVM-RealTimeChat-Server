@@ -3,8 +3,8 @@ services:
     name: evm-realtimechat-server
     runtime: node
     plan: free
-    buildCommand: pnpm i
-    startCommand: pnpm run dev
+    buildCommand: pnpm i && pnpm build
+    startCommand: pnpm run start
     envVars:
       - key: VITE_DEV_STATUS
         value: 3

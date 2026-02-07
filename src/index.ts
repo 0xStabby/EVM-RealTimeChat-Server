@@ -7,7 +7,11 @@ const httpServer = createServer();
 
 const io = new Server(httpServer, {
 	cors: {
-		origin: ['http://localhost:5173', `${process.env.LOCAL_IP}:5173`, 'https://evm-realtimechat-server.onrender.com'],
+		origin: [
+			'http://localhost:5173',
+			`${process.env.LOCAL_IP}:5173`,
+			'https://evm-realtimechat-server.onrender.com'
+		],
 		credentials: true
 	}
 });
@@ -162,4 +166,6 @@ function leaveChat(socket: Socket, chatId: string) {
 	}
 }
 
-httpServer.listen(3002, '0.0.0.0');
+httpServer.listen(3002, '0.0.0.0', () => {
+	console.log(`evm-realtimechat-server started`);
+});

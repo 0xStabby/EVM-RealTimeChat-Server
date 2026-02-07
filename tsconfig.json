@@ -1,8 +1,11 @@
 {
+	"include": [
+		"./**/*" // Assumes your index.ts is in a 'src' folder
+	],
 	"compilerOptions": {
 		// File Layout
-		// "rootDir": "./src",
-		// "outDir": "./dist",
+		"rootDir": "./",
+		"outDir": "./dist",
 
 		// Environment Settings
 		// See also https://aka.ms/tsconfig/module
@@ -36,7 +39,6 @@
 		"noUncheckedSideEffectImports": true,
 		"moduleDetection": "force",
 		"skipLibCheck": true,
-		"emitDeclarationOnly": true,
-		"allowImportingTsExtensions": true
+		"emitDeclarationOnly": false
 	}
 }
